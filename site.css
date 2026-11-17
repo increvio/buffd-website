@@ -67,6 +67,10 @@ p { margin: 0; }
 /* Held */
 .hero { padding: clamp(36px, 7vw, 88px) 0 0; }
 .hero .wrap { display: grid; gap: 48px; align-items: center; }
+/* Telefon oben endet bündig auf einer Linie (kein angeschnittener Text an der Bildschirmrundung) */
+.hero { border-bottom: 1px solid var(--line); overflow: hidden; }
+.hero .device.cut { align-self: end; }
+@media (min-width: 900px) { .hero .wrap > div:first-child { padding-bottom: 72px; } }
 @media (min-width: 900px) { .hero .wrap { grid-template-columns: 1.1fr .9fr; } }
 .hero h1 { max-width: 10.5em; }
 .facts { list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 15px; color: var(--muted); }

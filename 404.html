@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="apple-itunes-app" content="app-id=6825500313">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | Buffd</title>
+<meta name="description" content="You have been invited to Buffd. Stick with it together, and you both get 30 days of Plus for free.">
+<meta property="og:title" content="You have been invited to Buffd">
+<meta property="og:description" content="Stick with it together. With this link you both get 30 days of Plus for free.">
+<meta property="og:image" content="https://buffd.app/img/og-home.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/site.css">
+<style>
+  .code { font-family: var(--title); font-size: 2.6rem; letter-spacing: .25em; font-weight: 800; margin: .3em 0; }
+  .stack { display: flex; flex-direction: column; gap: 12px; max-width: 360px; }
+  .stack .btn { text-align: center; justify-content: center; }
+  .wrap.narrow { max-width: 560px; padding-top: 48px; padding-bottom: 64px; }
+  .note { color: var(--muted); font-size: 16px; }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="/" aria-label="Buffd home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="8 8 84 84" width="28" height="28" aria-hidden="true"><polygon points="50.00,11.00 83.77,30.50 83.77,69.50 50.00,89.00 16.23,69.50 16.23,30.50" fill="none" stroke="#0B0B0C" stroke-opacity="0.38" stroke-width="2.6" stroke-linejoin="round"/><polygon points="50.00,30.50 66.89,40.25 66.89,59.75 50.00,69.50 33.11,59.75 33.11,40.25" fill="none" stroke="#0B0B0C" stroke-opacity="0.2" stroke-width="1.4" stroke-linejoin="round"/><line x1="50" y1="50" x2="50.00" y2="11.00" stroke="#0B0B0C" stroke-opacity="0.16" stroke-width="1.2"/><line x1="50" y1="50" x2="83.77" y2="30.50" stroke="#0B0B0C" stroke-opacity="0.16" stroke-width="1.2"/><line x1="50" y1="50" x2="83.77" y2="69.50" stroke="#0B0B0C" stroke-opacity="0.16" stroke-width="1.2"/><line x1="50" y1="50" x2="50.00" y2="89.00" stroke="#0B0B0C" stroke-opacity="0.16" stroke-width="1.2"/><line x1="50" y1="50" x2="16.23" y2="69.50" stroke="#0B0B0C" stroke-opacity="0.16" stroke-width="1.2"/><line x1="50" y1="50" x2="16.23" y2="30.50" stroke="#0B0B0C" stroke-opacity="0.16" stroke-width="1.2"/><polygon points="50.00,12.95 75.33,35.38 66.89,59.75 50.00,83.15 39.87,55.85 28.05,37.32" fill="#E4E4E7" stroke="#0B0B0C" stroke-width="5.5" stroke-linejoin="round"/></svg><span>buffd</span></a>
+  <nav aria-label="Main"><a href="/guides/">Guides</a></nav>
+</div></header>
+<main class="wrap narrow">
+<div id="invite" hidden>
+<h1>You've been invited</h1>
+<p class="sub">Together you stick with it. With this invite you both get <strong>30 days of Plus for free</strong>.</p>
+<div id="withCode" hidden>
+  <p class="note">Your invite code</p>
+  <p class="code" id="code"></p>
+</div>
+<div class="stack">
+  <a class="btn" id="open" href="increvio://">Open in the app</a>
+  <a class="btn btn-light" id="get" href="https://apps.apple.com/app/increvio/id6825500313">Get the app</a>
+</div>
+<p class="note" id="hint">No app yet? Get it first, then tap this link again or enter the code in the Friends tab.</p>
+<p class="note" id="copied" hidden>Invite copied. After installing, open the app and paste it when asked, or tap this link again.</p>
+</div>
+<div id="missing">
+<h1>Page not found</h1>
+<p class="sub">This page doesn't exist (anymore). Try the guides or go back home.</p>
+<p style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px"><a class="btn" href="/">Go home</a><a class="btn btn-light" href="/guides/">Read the guides</a></p>
+</div>
+</main>
+<script>
+  // GitHub Pages zeigt diese Seite für jede unbekannte Adresse. Einladungen: /i/ABC123 (?challenge=… oder ?workout=…).
+  var match = location.pathname.match(/^\/i\/([A-Za-z0-9]{6})\/?$/);
+  if (match) {
+    var code = match[1].toUpperCase();
+    var query = new URLSearchParams(location.search);
+    var extra = new URLSearchParams();
+    ["challenge", "workout"].forEach(function (k) { var v = query.get(k); if (v && /^\d+$/.test(v)) extra.set(k, v); });
+    document.title = "Invitation to Buffd";
+    document.getElementById("code").textContent = code;
+    document.getElementById("withCode").hidden = false;
+    document.getElementById("open").href = "increvio://invite/" + code + (extra.toString() ? "?" + extra.toString() : "");
+    document.getElementById("invite").hidden = false;
+    // Einladung nicht verlieren (24.10.): Link beim Tippen auf „App laden“ in die Zwischenablage legen.
+    // Die App bietet ihn auf der ersten Seite zum Einfügen an.
+    var link = location.origin + "/i/" + code + (extra.toString() ? "?" + extra.toString() : "");
+    document.getElementById("get").addEventListener("click", function () {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(link).then(function () {
+          document.getElementById("hint").hidden = true;
+          document.getElementById("copied").hidden = false;
+        }).catch(function () {});
+      }
+    });
+    document.getElementById("missing").hidden = true;
+  }
+</script>
+</body>
+</html>

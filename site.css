@@ -169,7 +169,8 @@ p { margin: 0; }
 .final .btn { background: #fff; color: var(--ink); }
 
 /* Fußzeile */
-.foot { margin-top: clamp(72px, 10vw, 120px); border-top: 1px solid var(--line); padding: 56px 0 120px; font-size: 15px; }
+.foot { margin-top: clamp(72px, 10vw, 120px); border-top: 1px solid var(--line); padding: 56px 0 96px; font-size: 15px; }
+@media (min-width: 900px) { .foot { padding-bottom: 40px; } }  /* unten nur auf dem Handy Platz für den schwebenden Knopf */
 .foot-grid { display: grid; gap: 32px; grid-template-columns: 1fr 1fr; }
 @media (min-width: 900px) { .foot-grid { grid-template-columns: 1.6fr 1fr 1.2fr 1fr; } }
 .foot-grid > div:first-child { grid-column: 1 / -1; }

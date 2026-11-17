@@ -224,6 +224,7 @@ p { margin: 0; }
 .toc ol { list-style: none; padding: 0; margin: 0 0 20px; display: grid; gap: 8px; border-left: 1px solid var(--line); }
 .toc a { text-decoration: none; color: var(--muted); display: block; padding-left: 14px; margin-left: -1px; border-left: 2px solid transparent; line-height: 1.35; }
 .toc a.on, .toc a:hover { color: var(--ink); border-left-color: var(--ink); }
+.toc a.btn { color: #fff; border-left: 0; padding: 0 16px; margin-left: 0; display: inline-flex; }
 .prose { font-size: 18px; line-height: 1.7; min-width: 0; }
 .prose > * + * { margin-top: 1.1em; }
 .prose h2 { font-size: clamp(26px, 3.2vw, 32px); margin-top: 2em; line-height: 1.15; }

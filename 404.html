@@ -63,7 +63,8 @@
     document.getElementById("invite").hidden = false;
     // Einladung nicht verlieren (24.10.): Link beim Tippen auf „App laden“ in die Zwischenablage legen.
     // Die App bietet ihn auf der ersten Seite zum Einfügen an.
-    var link = location.origin + "/i/" + code + (extra.toString() ? "?" + extra.toString() : "");
+    // Die App erkennt bis zum nächsten Update nur increvio.com-Links, deshalb immer diese Adresse kopieren.
+    var link = "https://increvio.com/i/" + code + (extra.toString() ? "?" + extra.toString() : "");
     document.getElementById("get").addEventListener("click", function () {
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(link).then(function () {

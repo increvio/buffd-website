@@ -109,7 +109,7 @@ p { margin: 0; }
 /* Bausteine */
 .blocks { display: grid; gap: 20px; margin-top: 56px; }
 @media (min-width: 900px) { .blocks { grid-template-columns: repeat(3, 1fr); } }
-.block { background: var(--soft); border-radius: 28px; padding: 32px 28px 0; display: flex; flex-direction: column; overflow: hidden; }
+.block { background: #fff; border: 1px solid var(--line); border-radius: 28px; padding: 32px 28px 0; display: flex; flex-direction: column; overflow: hidden; }
 .block .num { font-size: 15px; font-weight: 600; color: var(--muted); }
 .block h3 { font-size: 28px; letter-spacing: -.025em; margin-top: 8px; }
 .block p { color: var(--muted); margin-top: 10px; }
@@ -274,3 +274,25 @@ p { margin: 0; }
 .page .btn { margin: 20px 0; }
 
 /* Kein Einblenden beim Scrollen (17.11.): Inhalt steht sofort da, ruhiger und schneller. */
+
+/* 22.11.2026: Bilder = App-Store-Bilder 1.0.5 (ganzes iPhone mit Dynamic Island, weißer Grund). Darum liegen sie nur auf Weiß. */
+.phone { width: min(100%, 300px); margin: 0 auto; }
+.phone-img { width: 100%; height: auto; }
+.hero { border-bottom: 0; }
+.hero .wrap { align-items: center; }
+.hero-phone { width: min(100%, 400px); }
+@media (min-width: 900px) { .hero .wrap > div:first-child { padding-bottom: 0; } }
+.block .phone { margin-top: auto; padding-top: 8px; width: min(92%, 300px); }
+.chart-grid { display: grid; gap: 40px; margin-top: 48px; align-items: start; }
+@media (min-width: 900px) { .chart-grid { grid-template-columns: .8fr 1.2fr; gap: 64px; } .chart-grid .phone { position: sticky; top: 88px; width: min(100%, 360px); } }
+.axes { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+@media (min-width: 340px) { .axes { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .axes li { padding: 14px; font-size: 15px; } }
+.axes li { background: var(--soft); border-radius: 16px; padding: 16px 18px; color: var(--muted); font-size: 16px; line-height: 1.4; }
+.axes b { display: block; color: var(--ink); font-size: 17px; margin-bottom: 2px; }
+.chart-grid .bands { margin: 28px 0 28px; }
+.chart-grid .honest { margin-top: 12px; }
+.details { margin-top: 20px; border: 1px solid var(--line); border-radius: 28px; padding: 28px; }
+.details h3 { font-size: 21px; }
+.details ul { list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.details li { background: var(--soft); border-radius: 999px; padding: 7px 14px; font-size: 15px; font-weight: 500; }

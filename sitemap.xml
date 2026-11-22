@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://buffd.app/</loc><lastmod>2026-11-21</lastmod><priority>1.0</priority></url>
-  <url><loc>https://buffd.app/guides/</loc><lastmod>2026-11-21</lastmod><priority>0.9</priority></url>
-  <url><loc>https://buffd.app/guides/training/</loc><lastmod>2026-11-21</lastmod><priority>0.8</priority></url>
-  <url><loc>https://buffd.app/guides/nutrition/</loc><lastmod>2026-11-21</lastmod><priority>0.8</priority></url>
-  <url><loc>https://buffd.app/guides/consistency/</loc><lastmod>2026-11-21</lastmod><priority>0.8</priority></url>
-  <url><loc>https://buffd.app/guides/apps/</loc><lastmod>2026-11-21</lastmod><priority>0.8</priority></url>
+  <url><loc>https://buffd.app/</loc><lastmod>2026-11-22</lastmod><priority>1.0</priority></url>
+  <url><loc>https://buffd.app/de/</loc><lastmod>2026-11-22</lastmod><priority>0.9</priority></url>
+  <url><loc>https://buffd.app/guides/</loc><lastmod>2026-11-22</lastmod><priority>0.9</priority></url>
+  <url><loc>https://buffd.app/guides/training/</loc><lastmod>2026-11-22</lastmod><priority>0.8</priority></url>
+  <url><loc>https://buffd.app/guides/nutrition/</loc><lastmod>2026-11-22</lastmod><priority>0.8</priority></url>
+  <url><loc>https://buffd.app/guides/consistency/</loc><lastmod>2026-11-22</lastmod><priority>0.8</priority></url>
+  <url><loc>https://buffd.app/guides/apps/</loc><lastmod>2026-11-22</lastmod><priority>0.8</priority></url>
   <url><loc>https://buffd.app/guides/how-to-start-working-out/</loc><lastmod>2026-11-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://buffd.app/guides/how-many-sets-per-week-to-build-muscle/</loc><lastmod>2026-11-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://buffd.app/guides/progressive-overload/</loc><lastmod>2026-11-08</lastmod><priority>0.8</priority></url>
@@ -61,8 +62,9 @@
   <url><loc>https://buffd.app/guides/workout-app-with-friends/</loc><lastmod>2026-11-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://buffd.app/guides/fitness-app-for-beginners/</loc><lastmod>2026-11-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://buffd.app/guides/habit-tracker-vs-fitness-coach-app/</loc><lastmod>2026-11-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://buffd.app/about/timur-leontyev/</loc><lastmod>2026-11-21</lastmod><priority>0.5</priority></url>
-  <url><loc>https://buffd.app/support/</loc><lastmod>2026-11-21</lastmod><priority>0.4</priority></url>
-  <url><loc>https://buffd.app/privacy/</loc><lastmod>2026-11-21</lastmod><priority>0.3</priority></url>
-  <url><loc>https://buffd.app/legal-notice/</loc><lastmod>2026-11-21</lastmod><priority>0.3</priority></url>
+  <url><loc>https://buffd.app/about/timur-leontyev/</loc><lastmod>2026-11-22</lastmod><priority>0.5</priority></url>
+  <url><loc>https://buffd.app/support/</loc><lastmod>2026-11-22</lastmod><priority>0.4</priority></url>
+  <url><loc>https://buffd.app/de/hilfe/</loc><lastmod>2026-11-22</lastmod><priority>0.4</priority></url>
+  <url><loc>https://buffd.app/privacy/</loc><lastmod>2026-11-22</lastmod><priority>0.3</priority></url>
+  <url><loc>https://buffd.app/legal-notice/</loc><lastmod>2026-11-22</lastmod><priority>0.3</priority></url>
 </urlset>

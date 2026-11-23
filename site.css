@@ -277,7 +277,7 @@ p { margin: 0; }
 
 /* 22.11.2026: Bilder = App-Store-Bilder 1.0.5 (ganzes iPhone mit Dynamic Island, weißer Grund). Darum liegen sie nur auf Weiß. */
 .phone { width: min(100%, 300px); margin: 0 auto; }
-.phone-img { width: 100%; height: auto; }
+.phone-img { width: 100%; height: auto; -webkit-mask-image: linear-gradient(to bottom, transparent, #000 2.4%); mask-image: linear-gradient(to bottom, transparent, #000 2.4%); } /* Schatten der Store-Bilder läuft oben weich aus */
 .hero { border-bottom: 0; }
 .hero .wrap { align-items: center; }
 .hero-phone { width: min(100%, 400px); }
